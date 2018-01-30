@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/dismiss"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:srcCompat="@drawable/close"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_below="@id/dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="آدرس دقیق محل ارسال کالا"
+        android:textColor="@color/jet"
+        android:paddingRight="10dp"
+        android:textCursorDrawable="@color/primary"
+        android:textColorHint="@color/base"/>
+
+    <RadioGroup
+        android:id="@+id/purchaseType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/address"
+        android:gravity="center"
+        android:background="@color/primary"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp">
+
+    <RadioButton
+            android:id="@+id/radioButton_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right|center"
+            android:text="نقدی"
+            android:textColor="@color/jet"/>
+
+        <RadioButton
+            android:id="@+id/radioButton_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right|center"
+            android:text="آنلاین"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/jet" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveAddress"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/purchaseType"
+        android:text="تایید نهایی"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_height="match_parent"
+    layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iron">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary"
+        android:id="@+id/toolbar">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/backFromSearch" />
+
+        <ImageView
+            android:id="@+id/backFromSearch"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/backarrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="@color/iron">
+
+        <RelativeLayout
+            android:id="@+id/productRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/iron">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/productRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/iron"
+                android:paddingBottom="15dp">
+            </android.support.v7.widget.RecyclerView>
+
+            <ProgressBar
+                android:id="@+id/item_progress_bar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:elevation="5dp"
+                android:padding="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/first"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/updateAccount"
+            android:icon="@drawable/profile"
+            android:title="تکمیل و به‌روز‌رسانی حساب کاربری" />
+        <item
+            android:id="@+id/createStore"
+            android:icon="@drawable/storemanager"
+            android:title="ساخت و تکمیل حجره" />
+
+        <item
+            android:id="@+id/myOrders"
+            android:icon="@drawable/myorder"
+            android:title="سفارشات من" />
+    </group>
+
+    <group
+        android:id="@+id/second"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/FAQ"
+            android:title="سوالات متداول"/>
+        <item
+            android:id="@+id/about_us"
+            android:title="درباره‌ ما" />
+        <item
+            android:id="@+id/contact"
+            android:title="تماس با ما" />
+    </group>
+
+    <group
+        android:id="@+id/third"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/logOut"
+            android:title="خروج"/>
+    </group>
+
+</menu>

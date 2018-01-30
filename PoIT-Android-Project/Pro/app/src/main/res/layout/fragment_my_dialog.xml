@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <TextView
+        android:text="شما به حساب کاربری خود وارد نشده‌اید"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/jet"
+        android:id="@+id/textView11"
+        android:textStyle="normal|bold"
+        android:gravity="center" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <Button
+            android:text="ورود به حساب کاربری"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/motevaset"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@color/primary"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+    </LinearLayout>
+</LinearLayout>

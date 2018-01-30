@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">نوید گستر</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="app_Intro">Intro Slider</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">بعدی</string>
+    <string name="skip">پرش</string>
+    <string name="start">فهمیدم!</string>
+
+    <string name="slide_1_title">به</string>
+    <string name="slide_1_desc">خوش آمدید!!!</string>
+
+    <!--<string name="slide_2_title">Movie Tickets</string>-->
+    <!--<string name="slide_2_desc">Book movie tickets for your family and friends!</string>-->
+
+    <string name="slide_3_title">نگاه کلی به نوید گستر</string>
+    <string name="slide_3_desc">نوید گستر ، شبیه‌سازی یک بازار در فضای مجازی است که از راسته‌های مختلف تشکیل شده‌است. هر راسته خود از چندین حجره به‌وجود می‌آید</string>
+
+    <string name="slide_4_title">خرید کالا</string>
+    <string name="slide_4_desc">شما می‌توانید به عنوان یک خریدار، کالای موردنظر خود را از حجره فروشندگان خریداری نمائید</string>
+
+    <string name="slide_5_title">فروش کالا</string>
+    <string name="slide_5_desc">شما همچنین می‌توانید فروشنده باشید! حجره خود را بسازید و کالای خود را به نمایش بگذارید</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_search">SearchActivity</string>
+
+    <string name="transition_string">transition</string>
+
+    <!--<string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>-->
+    <!--<string name="play_again">Play Again</string>-->
+
+
+    <string name="category_prompt">انتخاب یک دسته</string>
+    <string name="subCategory_prompt">انتخاب زیردسته</string>
+
+    <string-array name="category_arrays">
+        <item>کالای دیجیتال</item>
+        <item>مد و لباس</item>
+        <item>لوازم خانه</item>
+        <item>زیبایی و سلامت</item>
+        <item>سرگرمی و ورزش</item>
+        <item>فرهنگ و هنر</item>
+        <item>ابزار و خودرو</item>
+        <item>مواد غذایی و خوراکی</item>
+    </string-array>
+    <string name="title_activity_store_write_comment">StoreWriteCommentActivity</string>
+
+</resources>

@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.navid.androidproject.Activity.ZoomActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/banerLayout"
+        android:clickable="true"
+        android:onClick="animateIntent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <com.example.navid.androidproject.Other.TouchViewPager
+            android:id="@+id/baner"
+            android:transitionName="@string/transition_string"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layoutDirection="rtl">
+        </com.example.navid.androidproject.Other.TouchViewPager>
+
+        <LinearLayout
+            android:id="@+id/banerDots"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"></LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/closeeeer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/close" />
+
+</RelativeLayout>

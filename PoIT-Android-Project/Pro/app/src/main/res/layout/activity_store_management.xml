@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/iron">
+
+    <RelativeLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary">
+
+    <TextView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="مدیریت حجره"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/logo"
+            android:paddingRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/infoRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/appbar">
+        <RelativeLayout
+            android:id="@+id/myProductsTextRL"
+            android:layout_width="match_parent"
+            android:layout_height="32dp">
+
+            <TextView
+                android:background="@color/white"
+                android:id="@+id/myProductText"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="کالا‌های من"
+                android:textSize="15dp"
+                android:textColor="@color/jet"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+            <View
+                android:id="@+id/seperate"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/myProductText"
+                android:background="@color/secondary_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/productsRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myProductsTextRL">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="13dp"
+                app:backgroundTint="@color/primary"
+                app:srcCompat="@drawable/plus"
+                android:tint="@color/white"
+                app:rippleColor="@color/primary_darker" />
+
+            <TextView
+                android:id="@+id/addText"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/floatingActionButton"
+                android:layout_marginEnd="12dp"
+                android:layout_toStartOf="@+id/floatingActionButton"
+                android:text="افزودن کالای جدید"
+                android:textColor="@color/jet"
+                android:textSize="17dp" />
+
+            <RelativeLayout
+                android:id="@+id/productsRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/addText"
+                android:background="@color/iron"
+                android:layoutDirection="rtl">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/relativeLayout3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="5dp"
+                        android:text="کالاهای موجود"
+                        android:textColor="@color/jet"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/productsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_below="@+id/relativeLayout3">
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/saveRL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+            <Button
+                android:id="@+id/save"
+                android:text="ثبت"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@color/jet"
+                android:background="@color/primary" />
+        </RelativeLayout>
+</RelativeLayout>

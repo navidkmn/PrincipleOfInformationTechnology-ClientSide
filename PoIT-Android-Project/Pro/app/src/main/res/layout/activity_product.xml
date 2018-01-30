@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.navid.androidproject.Activity.ProductActivity"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:id="@+id/mainRL">
+
+    <RelativeLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary"
+        android:layoutDirection="ltr">
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/backFromProduct"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/backFromProduct"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:srcCompat="@drawable/backarrow" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/informaiton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/banerLayout"
+                    android:clickable="true"
+                    android:onClick="animateIntent"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/iron">
+
+                    <com.example.navid.androidproject.Other.TouchViewPager
+                        android:id="@+id/baner"
+                        android:transitionName="@string/transition_string"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layoutDirection="rtl">
+                    </com.example.navid.androidproject.Other.TouchViewPager>
+
+                    <LinearLayout
+                        android:id="@+id/banerDots"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="25dp"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/addTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/banerLayout"
+                    android:background="@color/primary">
+
+                    <ImageView
+                        android:id="@+id/favorite"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:srcCompat="@drawable/star"
+                        android:layout_marginLeft="20dp"/>
+
+                    <ImageView
+                        android:id="@+id/card"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:srcCompat="@drawable/bascket"
+                        android:layout_toRightOf="@+id/favorite"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView
+                        android:id="@+id/share"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/share"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/priceRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/addTo">
+
+                    <TextView
+                        android:id="@+id/priceText"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:text="قیمت (به تومان) :"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/jet"
+                        android:paddingRight="10dp"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:id="@+id/productPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="17dp"
+                        android:textColor="@color/jet"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_toLeftOf="@id/priceText"/>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/seperate20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/priceRL"
+                    android:background="@color/secondary_text" />
+
+                <RelativeLayout
+                    android:id="@+id/quantityRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/seperate20">
+
+                    <TextView
+                        android:id="@+id/quantityText"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical"
+                        android:paddingRight="10dp"
+                        android:text="تعداد کالای باقی‌مانده"
+                        android:textColor="@color/jet"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/productQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/quantityText"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/jet"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/seperate9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/quantityRL"
+                    android:background="@color/secondary_text" />
+
+
+                <RelativeLayout
+                    android:id="@+id/storeRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/seperate9">
+
+                    <TextView
+                        android:id="@+id/storeText"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:text="نام حجره :"
+                        android:textSize="15dp"
+                        android:textColor="@color/jet"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:paddingRight="10dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/productStore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="17dp"
+                        android:textColor="@color/red"
+                        android:layout_toLeftOf="@id/storeText"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/seperate40"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/storeRL"
+                    android:background="@color/secondary_text" />
+
+
+                <RelativeLayout
+                    android:id="@+id/subCategoryRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/seperate40">
+
+                    <TextView
+                        android:id="@+id/subCategoryText"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:text="دسته‌بندی :"
+                        android:textSize="15dp"
+                        android:textColor="@color/jet"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:paddingRight="10dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/productSubCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="17dp"
+                        android:textColor="@color/jet"
+                        android:layout_toLeftOf="@id/subCategoryText"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/seperate"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/informaiton"
+                android:background="@color/secondary_text"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rateTheProduct"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/seperate">
+
+                <RelativeLayout
+                    android:id="@+id/priceRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/ratePriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="امتیاز کاربران به قیمت"
+                        android:textColor="@color/jet"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/priceRatingBar"
+                        style="?attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:theme="@style/RatingBar" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/quantityRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/priceRate">
+
+                    <TextView
+                        android:id="@+id/rateQualityText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="امتیاز کاربران به کیفیت"
+                        android:textColor="@color/jet"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/qualityRatingBar"
+                        style="?attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:theme="@style/RatingBar" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/seperate3"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/rateTheProduct"
+                android:background="@color/secondary_text"
+                />
+
+            <RelativeLayout
+                android:id="@+id/moreInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seperate3">
+
+                <TextView
+                    android:id="@+id/infoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="توضیحات‌"
+                    android:textColor="@color/jet"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/infoText">
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/jet"/>
+                </ScrollView>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/seperate1"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/moreInfo"
+                android:background="@color/secondary_text" />
+            <RelativeLayout
+                android:id="@+id/productReviewRL"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/seperate1">
+                <TextView
+                    android:id="@+id/productReviewButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="← مشاهده نظر کاربران"
+                    android:textColor="@color/red"
+                    android:gravity="center" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.example.navid.androidproject.Activity.StoreWriteCommentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary"
+        android:id="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/logo"
+            android:layout_marginRight="11dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/backFromWriteReview" />
+
+        <ImageView
+            android:id="@+id/backFromWriteReview"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/backarrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/writeCommentRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+        <ScrollView
+            android:id="@+id/commentScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/writeCommentRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/writeComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/base"
+                    android:paddingRight="10dp"
+                    android:hint="نظر خود را اینجا وارد کنید"
+                    android:textColor="@color/jet"
+                    android:textCursorDrawable="@color/primary"/>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/primary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/ratingPriceRL"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/secondary_text">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="امتیاز به قیمت"
+                android:paddingRight="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/jet"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:theme="@style/RatingBar"
+                android:stepSize="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ratingQualityRL"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/secondary_text"
+            android:layout_below="@id/ratingPriceRL">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="امتیاز به کیفیت"
+                android:paddingRight="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/jet"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:theme="@style/RatingBar"
+                android:stepSize="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/saveComment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="ثبت نظر"
+            android:layout_below="@id/ratingQualityRL"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+    </RelativeLayout>
+
+</RelativeLayout>

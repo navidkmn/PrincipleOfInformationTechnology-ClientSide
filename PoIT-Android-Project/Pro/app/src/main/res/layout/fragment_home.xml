@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.navid.androidproject.Fragment.HomeFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tabViewPager">
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/iron">
+
+                <RelativeLayout
+                    android:id="@+id/banerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/iron">
+
+                    <com.example.navid.androidproject.Other.TouchViewPager
+                        android:id="@+id/baner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layoutDirection="rtl">
+                    </com.example.navid.androidproject.Other.TouchViewPager>
+
+                    <LinearLayout
+                        android:id="@+id/banerDots"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="25dp"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:orientation="horizontal"></LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/seperate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/banerLayout"
+                    android:background="@color/secondary_text" />
+
+                <RelativeLayout
+                    android:id="@+id/bestSelling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/seperate"
+                    android:background="@color/iron"
+                    android:layoutDirection="rtl">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:id="@+id/relativeLayout3">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="5dp"
+                            android:text="بهترین‌ها (قیمت)"
+                            android:textColor="@color/jet"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/comList1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/jet" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/bestSellingRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_below="@+id/relativeLayout3">
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/seperate5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/bestSelling"
+                    android:background="@color/secondary_text" />
+
+                <RelativeLayout
+                    android:id="@+id/mostPopular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/seperate5"
+                    android:background="@color/iron">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:id="@+id/relativeLayout6">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="5dp"
+                            android:text="بهترین‌ها (کیفیت)"
+                            android:textColor="@color/jet"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/comList2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/jet" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/mostPopularRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_below="@+id/relativeLayout6">
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/seperate4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/mostPopular"
+                    android:background="@color/secondary_text" />
+
+                <RelativeLayout
+                    android:id="@+id/newest"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/seperate4"
+                    android:background="@color/iron">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:id="@+id/relativeLayout5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginRight="14dp"
+                            android:layout_marginTop="5dp"
+                            android:text="جدیدترین‌ها"
+                            android:textColor="@color/jet"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/comList3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/jet" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/newestRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_below="@+id/relativeLayout5">
+                    </android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/seperate2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/newest"
+                    android:background="@color/secondary_text" />
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>
+
